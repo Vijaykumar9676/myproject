@@ -3,219 +3,891 @@
 <head>
 <meta charset="UTF-8">
 <title>Starbucks Market Entry Strategy - India</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-body{
-  font-family: Arial, Helvetica, sans-serif;
-  background:#e2dcdc;
-  color:white;
-}
-
-header{
-  background:#006241;
-  padding:25px;
-  text-align:center;
-}
-
-header img{
-  width:130px;
-  background:white;
-  border-radius:50%;
-  padding:8px;
+/* ===== VARIABLES & RESET ===== */
+:root {
+    --starbucks-green: #006241;
+    --starbucks-gold: #D4B483;
+    --starbucks-light: #E8F3EB;
+    --starbucks-dark: #1E3932;
+    --accent-teal: #00A862;
+    --light-bg: #F9F6F1;
+    --text-dark: #2D2926;
+    --text-light: #5A534E;
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.12);
+    --border-radius: 16px;
+    --transition: all 0.3s ease;
 }
 
-header h1{
-  margin-top:10px;
-  font-size:30px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.container{
-  width:85%;
-  margin:auto;
-  margin-top:20px;
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--light-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
 }
 
-section{
-  background:#8e7b7b;
-  padding:20px;
-  margin:15px 0;
-  border-radius:10px;
-  border:1px solid #1f1f1f;
+/* ===== HEADER ===== */
+.main-header {
+    background: linear-gradient(135deg, var(--starbucks-dark) 0%, var(--starbucks-green) 100%);
+    padding: 4rem 5% 3rem;
+    position: relative;
+    overflow: hidden;
 }
 
-h2{
-  color:#00ff9c;
-  margin-bottom:10px;
+.header-pattern {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
-ul{
-  margin-left:20px;
-  margin-top:8px;
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
-ul li{
-  margin:7px 0;
-  line-height:1.5;
+.logo-container {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 50%;
+    padding: 20px;
+    margin: 0 auto 2rem;
+    box-shadow: var(--shadow-lg);
+    border: 5px solid var(--starbucks-gold);
 }
 
-.small-img{
-  width:280px;
-  height:180px;
-  object-fit:cover;
-  border-radius:10px;
-  display:block;
-  margin:10px 0;
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.row{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
+.header-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
-footer{
-  text-align:center;
-  padding:20px;
-  background:#006241;
-  margin-top:30px;
+.header-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-weight: 300;
+}
+
+.header-tagline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.8rem 2rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    font-weight: 500;
+    color: white;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    max-width: 1200px;
+    margin: -2rem auto 4rem;
+    padding: 0 5%;
+    position: relative;
+    z-index: 10;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.strategy-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(0, 98, 65, 0.1);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.strategy-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.strategy-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--starbucks-green), var(--accent-teal));
+}
+
+.card-number {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--starbucks-green), var(--accent-teal));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--starbucks-dark);
+    margin-bottom: 1.5rem;
+    padding-right: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-title i {
+    color: var(--starbucks-gold);
+    font-size: 1.5rem;
+}
+
+.card-content {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.grid-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgba(0, 98, 65, 0.1);
+    transition: var(--transition);
+}
+
+.grid-image:hover {
+    transform: scale(1.05);
+    border-color: var(--starbucks-green);
+}
+
+.feature-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.feature-list li {
+    padding: 0.8rem 0;
+    padding-left: 2.5rem;
+    position: relative;
+    color: var(--text-dark);
+    border-bottom: 1px solid rgba(0, 98, 65, 0.1);
+}
+
+.feature-list li:last-child {
+    border-bottom: none;
+}
+
+.feature-list li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-teal);
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 24px;
+    height: 24px;
+    background: rgba(0, 168, 98, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== HIGHLIGHT SECTIONS ===== */
+.highlight-section {
+    background: linear-gradient(135deg, rgba(0, 98, 65, 0.05) 0%, rgba(232, 243, 235, 0.5) 100%);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    margin: 3rem 0;
+    border-left: 5px solid var(--starbucks-gold);
+}
+
+.highlight-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--starbucks-dark);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.highlight-content {
+    color: var(--text-dark);
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* ===== COMPETITION SECTION ===== */
+.competition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.competitor-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    border: 2px solid rgba(0, 98, 65, 0.1);
+    transition: var(--transition);
+}
+
+.competitor-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--starbucks-green);
+}
+
+.competitor-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(0, 98, 65, 0.1);
+}
+
+.competitor-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--starbucks-light), white);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--starbucks-green);
+    font-size: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.competitor-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--starbucks-dark);
+}
+
+.competitor-features {
+    list-style: none;
+}
+
+.competitor-features li {
+    padding: 0.6rem 0;
+    color: var(--text-light);
+    position: relative;
+    padding-left: 1.8rem;
+}
+
+.competitor-features li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--starbucks-green);
+    font-size: 1.5rem;
+}
+
+/* ===== STRATEGY MATRIX ===== */
+.strategy-matrix {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.matrix-item {
+    background: white;
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: var(--shadow-sm);
+    border-top: 4px solid var(--accent-teal);
+}
+
+.matrix-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+}
+
+.matrix-header i {
+    color: var(--starbucks-green);
+    font-size: 1.3rem;
+}
+
+.matrix-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--starbucks-dark);
+}
+
+.matrix-content {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ===== FOOTER ===== */
+.main-footer {
+    background: linear-gradient(135deg, var(--starbucks-dark) 0%, var(--starbucks-green) 100%);
+    color: white;
+    padding: 4rem 5% 3rem;
+    margin-top: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-logo {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 0 auto 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.footer-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--starbucks-gold);
+}
+
+.footer-text {
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+}
+
+.author-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.author-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--starbucks-gold), #F7DC6F);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--starbucks-dark);
+    font-size: 1.8rem;
+    box-shadow: var(--shadow-md);
+}
+
+.author-details {
+    text-align: center;
+}
+
+.author-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: rgb(3, 1, 17);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.author-title {
+    color: var(--starbucks-gold);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.author-quote {
+    color: rgba(7, 0, 0, 0.85);
+    font-style: italic;
+    margin-top: 1rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.copyright {
+    margin-top: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 992px) {
+    .header-title {
+        font-size: 2.6rem;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .competition-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        padding: 3rem 5% 2rem;
+    }
+    
+    .header-title {
+        font-size: 2.2rem;
+    }
+    
+    .strategy-card {
+        padding: 2rem;
+    }
+    
+    .highlight-section {
+        padding: 2rem;
+    }
+    
+    .footer-title {
+        font-size: 1.8rem;
+    }
+    
+    .author-section {
+        padding: 1.5rem;
+    }
+    
+    .author-name {
+        font-size: 1.5rem;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <img src="https://upload.wikimedia.org/wikipedia/sco/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/2048px-Starbucks_Corporation_Logo_2011.svg.png">
-  <h1>Market Entry Strategy – Starbucks in India</h1>
-  <p>A Self-Driven Market Entry Analysis Project </p>
+<!-- Header -->
+<header class="main-header">
+    <div class="header-pattern"></div>
+    <div class="header-content">
+        <div class="logo-container">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/800px-Starbucks_Corporation_Logo_2011.svg.png" alt="Starbucks Logo">
+        </div>
+        <h1 class="header-title">India Market Entry Strategy</h1>
+        <p class="header-subtitle">A comprehensive analysis of Starbucks' strategic expansion into the Indian market</p>
+        <div class="header-tagline">
+            <i class="fas fa-chart-line"></i>
+            Strategic Business Analysis
+        </div>
+    </div>
 </header>
 
+<!-- Main Content -->
+<main class="main-content">
+    
+    <!-- Introduction -->
+    <div class="content-grid">
+        <div class="strategy-card">
+            <div class="card-number">1</div>
+            <h2 class="card-title">
+                <i class="fas fa-flag"></i>
+                Executive Summary
+            </h2>
+            <p class="card-content">
+                This strategic analysis outlines Starbucks' pathway to successful market penetration and sustained growth in India. We examine market opportunities, competitive landscape, target demographics, and strategic initiatives tailored for the Indian consumer.
+            </p>
+            <div class="image-grid">
+                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Starbucks Store" class="grid-image">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Coffee Culture" class="grid-image">
+            </div>
+        </div>
+        
+        <div class="strategy-card">
+            <div class="card-number">2</div>
+            <h2 class="card-title">
+                <i class="fas fa-building"></i>
+                Starbucks Corporation
+            </h2>
+            <p class="card-content">
+                Global coffeehouse chain renowned for premium coffee experiences and third-place philosophy.
+            </p>
+            <ul class="feature-list">
+                <li><strong>Founded:</strong> 1971, Seattle, Washington</li>
+                <li><strong>Global Presence:</strong> 32,000+ stores in 80+ countries</li>
+                <li><strong>Revenue (2023):</strong> $36.7 billion</li>
+                <li><strong>Core Values:</strong> Community, Sustainability, Quality</li>
+                <li><strong>Product Range:</strong> Coffee, Tea, Bakery, Merchandise</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Market Opportunity -->
+    <div class="highlight-section">
+        <h3 class="highlight-title">
+            <i class="fas fa-bullseye"></i>
+            India Market Opportunity
+        </h3>
+        <div class="highlight-content">
+            India represents one of the world's most promising growth markets with a rapidly expanding middle class, increasing urbanization, and evolving consumer preferences toward premium experiences. The café culture has seen exponential growth, creating ideal conditions for Starbucks' premium positioning.
+        </div>
+    </div>
+    
+    <div class="content-grid">
+        <div class="strategy-card">
+            <div class="card-number">3</div>
+            <h2 class="card-title">
+                <i class="fas fa-chart-pie"></i>
+                Market Rationale
+            </h2>
+            <ul class="feature-list">
+                <li><strong>Demographic Dividend:</strong> 65% population under 35 years</li>
+                <li><strong>Economic Growth:</strong> 6-7% annual GDP growth rate</li>
+                <li><strong>Urbanization:</strong> Rapid expansion of metro cities</li>
+                <li><strong>Disposable Income:</strong> Rising middle-class spending power</li>
+                <li><strong>Café Culture:</strong> Growing acceptance as social space</li>
+                <li><strong>Digital Adoption:</strong> High smartphone penetration</li>
+            </ul>
+        </div>
+        
+        <div class="strategy-card">
+            <div class="card-number">4</div>
+            <h2 class="card-title">
+                <i class="fas fa-users"></i>
+                Target Customer Segments
+            </h2>
+            <div class="image-grid">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Young Professionals" class="grid-image">
+                <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Students" class="grid-image">
+            </div>
+            <ul class="feature-list">
+                <li><strong>Urban Professionals:</strong> 25-40 years, premium lifestyle</li>
+                <li><strong>University Students:</strong> Metro cities, brand-conscious</li>
+                <li><strong>Young Urbanites:</strong> Social media active, experience-driven</li>
+                <li><strong>Expatriates:</strong> Brand familiarity, higher spending</li>
+                <li><strong>Business Meetings:</strong> Corporate clients, premium settings</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Competition Analysis -->
+    <div class="highlight-section">
+        <h3 class="highlight-title">
+            <i class="fas fa-chess-board"></i>
+            Competitive Landscape Analysis
+        </h3>
+        <div class="highlight-content">
+            India's café market is highly competitive with established domestic players and emerging international brands. Starbucks must differentiate through premium positioning and localized strategies.
+        </div>
+    </div>
+    
+    <div class="competition-grid">
+        <div class="competitor-card">
+            <div class="competitor-header">
+                <div class="competitor-icon">
+                    <i class="fas fa-coffee"></i>
+                </div>
+                <h4 class="competitor-name">Café Coffee Day</h4>
+            </div>
+            <ul class="competitor-features">
+                <li>Market leader with 1,500+ outlets</li>
+                <li>Strong youth appeal and affordability</li>
+                <li>Established supply chain network</li>
+                <li>Wide geographical presence</li>
+            </ul>
+        </div>
+        
+        <div class="competitor-card">
+            <div class="competitor-header">
+                <div class="competitor-icon">
+                    <i class="fas fa-mug-hot"></i>
+                </div>
+                <h4 class="competitor-name">Barista Lavazza</h4>
+            </div>
+            <ul class="competitor-features">
+                <li>Italian coffee expertise</li>
+                <li>Premium positioning in urban centers</li>
+                <li>Strong food pairing offerings</li>
+                <li>Established loyalty program</li>
+            </ul>
+        </div>
+        
+        <div class="competitor-card">
+            <div class="competitor-header">
+                <div class="competitor-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+                <h4 class="competitor-name">Local Premium Cafés</h4>
+            </div>
+            <ul class="competitor-features">
+                <li>Strong community connections</li>
+                <li>Cultural adaptation expertise</li>
+                <li>Niche market positioning</li>
+                <li>Flexible operational models</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Strategic Framework -->
+    <div class="content-grid">
+        <div class="strategy-card">
+            <div class="card-number">5</div>
+            <h2 class="card-title">
+                <i class="fas fa-tags"></i>
+                Pricing & Value Strategy
+            </h2>
+            <ul class="feature-list">
+                <li><strong>Premium Positioning:</strong> Maintain luxury brand image</li>
+                <li><strong>Value Packs:</strong> Family and group offerings</li>
+                <li><strong>Student Discounts:</strong> 15% off with valid ID</li>
+                <li><strong>Festival Specials:</strong> Diwali, Holi themed offers</li>
+                <li><strong>Loyalty Program:</strong> Stars rewards system</li>
+                <li><strong>Corporate Tie-ups:</strong> Bulk purchase discounts</li>
+            </ul>
+        </div>
+        
+        <div class="strategy-card">
+            <div class="card-number">6</div>
+            <h2 class="card-title">
+                <i class="fas fa-bullhorn"></i>
+                Marketing Strategy
+            </h2>
+            <ul class="feature-list">
+                <li><strong>Digital First:</strong> Social media campaigns</li>
+                <li><strong>Influencer Partnerships:</strong> Lifestyle creators</li>
+                <li><strong>Localized Content:</strong> Regional language campaigns</li>
+                <li><strong>Experience Marketing:</strong> Store events & workshops</li>
+                <li><strong>Corporate Gifting:</strong> Festival corporate packages</li>
+                <li><strong>App Integration:</strong> Seamless ordering & rewards</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Challenges & Solutions -->
+    <div class="strategy-matrix">
+        <div class="matrix-item">
+            <div class="matrix-header">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h4 class="matrix-title">Price Sensitivity</h4>
+            </div>
+            <p class="matrix-content">Indian consumers are highly price-conscious. Premium pricing requires careful justification through superior experience.</p>
+        </div>
+        
+        <div class="matrix-item">
+            <div class="matrix-header">
+                <i class="fas fa-utensils"></i>
+                <h4 class="matrix-title">Taste Adaptation</h4>
+            </div>
+            <p class="matrix-content">Local flavor preferences differ significantly. Menu must include Indian-inspired beverages and food items.</p>
+        </div>
+        
+        <div class="matrix-item">
+            <div class="matrix-header">
+                <i class="fas fa-store-slash"></i>
+                <h4 class="matrix-title">Competition Density</h4>
+            </div>
+            <p class="matrix-content">Established local chains have strong market penetration. Differentiation through premium experience is crucial.</p>
+        </div>
+    </div>
+    
+    <div class="content-grid">
+        <div class="strategy-card">
+            <div class="card-number">7</div>
+            <h2 class="card-title">
+                <i class="fas fa-lightbulb"></i>
+                Strategic Solutions
+            </h2>
+            <ul class="feature-list">
+                <li><strong>Localized Menu:</strong> Chai-infused beverages, regional snacks</li>
+                <li><strong>Tiered Pricing:</strong> Entry-level options alongside premium</li>
+                <li><strong>Partnership Model:</strong> Joint venture with Tata Group</li>
+                <li><strong>Supply Chain:</strong> Local sourcing for cost efficiency</li>
+                <li><strong>Digital Integration:</strong> Cashback via Indian payment apps</li>
+                <li><strong>Community Focus:</strong> Local art and culture integration</li>
+            </ul>
+        </div>
+        
+        <div class="strategy-card">
+            <div class="card-number">8</div>
+            <h2 class="card-title">
+                <i class="fas fa-road"></i>
+                Implementation Roadmap
+            </h2>
+            <ul class="feature-list">
+                <li><strong>Phase 1 (0-12 months):</strong> Metro city flagship stores</li>
+                <li><strong>Phase 2 (12-24 months):</strong> Tier-2 city expansion</li>
+                <li><strong>Phase 3 (24-36 months):</strong> National brand presence</li>
+                <li><strong>Phase 4 (36+ months):</strong> Omnichannel dominance</li>
+                <li><strong>KPIs:</strong> Store profitability, customer satisfaction</li>
+                <li><strong>Success Metrics:</strong> Market share, brand recall</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Conclusion -->
+    <div class="highlight-section">
+        <h3 class="highlight-title">
+            <i class="fas fa-check-circle"></i>
+            Strategic Conclusion
+        </h3>
+        <div class="highlight-content">
+            India presents a transformative growth opportunity for Starbucks. Success requires a balanced approach combining global brand standards with local market adaptation. Through premium positioning, strategic partnerships, cultural integration, and phased expansion, Starbucks can establish market leadership while maintaining its core brand identity. The key lies in understanding Indian consumer psychology while delivering the signature Starbucks experience.
+        </div>
+    </div>
+</main>
 
-<div class="container">
-
-<section>
-<h2>1️⃣ Introduction</h2>
-<p>
-This project explains how Starbucks can successfully expand, operate, and grow in the Indian market. 
-It covers the company overview, reasons for selecting India, target customers, competition, 
-pricing strategy, marketing plan, key challenges, and strategic solutions.
-</p>
-</section>
-
-<section>
-<h2>2️⃣ About Starbucks</h2>
-<div class="row">
-  <img class="small-img" src="https://th.bing.com/th/id/OIP.sbgCBDQBfTqnew4NpcIYgQHaE8?w=291&h=194&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
-  <img class="small-img" src="https://th.bing.com/th/id/OIP.PX-SgTFxdwJAJ_vWZtEjwgHaDt?w=321&h=175&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
-</div>
-<ul>
-  <li><b>Origin Country:</b> United States</li>
-  <li><b>Founded:</b> 1971</li>
-  <li><b>Industry:</b> Premium Coffeehouse Chain</li>
-  <li><b>Products:</b> Coffee, Beverages, Snacks, Desserts, Bakery, Merchandise</li>
-  <li><b>Brand Image:</b> Premium lifestyle café experience</li>
-</ul>
-</section>
-
-<section>
-<h2>3️⃣ Why India?</h2>
-<div class="row">
-  <img class="small-img" src="https://th.bing.com/th/id/OIP.7Qlryzxeo_g5aXMLrPgctwHaEK?w=294&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
-  <img class="small-img" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/047192134219551.61d1bc0e633f5.jpg">
-</div>
-<ul>
-  <li>One of the world’s fastest-growing consumer markets</li>
-  <li>Young population with rising spending power</li>
-  <li>Growing urban café culture</li>
-  <li>High demand for premium global brands</li>
-</ul>
-</section>
-
-<section>
-<h2>4️⃣ Target Customers</h2>
-<ul>
-  <li>Urban Students & Youth</li>
-  <li>Working Professionals</li>
-  <li>Upper Middle-Class Families</li>
-  <li>Lifestyle-oriented café visitors</li>
-</ul>
-<p>
-Focus: Customers who value premium experience and brand identity.
-</p>
-</section>
-
-<section>
-<h2>5️⃣ Competition Analysis</h2>
-<ul>
-  <li>Cafe Coffee Day</li>
-  <li>Barista</li>
-  <li>Local premium cafés</li>
-  <li>Restaurant chains offering premium beverages</li>
-</ul>
-<p>
-India already has strong coffee competition; Starbucks must maintain uniqueness.
-</p>
-</section>
-
-<section>
-<h2>6️⃣ Pricing Strategy</h2>
-<ul>
-  <li>Premium pricing to maintain luxury brand image</li>
-  <li>Festival & student discount offers</li>
-  <li>Combo packs and value deals</li>
-  <li>Loyalty & rewards membership</li>
-</ul>
-</section>
-
-<section>
-<h2>7️⃣ Marketing Strategy</h2>
-<ul>
-  <li>Powerful social media campaigns</li>
-  <li>Influencer partnerships</li>
-  <li>Diwali, Holi & Indian festival themed marketing</li>
-  <li>Loyalty app promotions</li>
-</ul>
-</section>
-
-<section>
-<h2>8️⃣ Key Challenges</h2>
-<ul>
-  <li>High price sensitivity of Indian customers</li>
-  <li>Existing strong competition</li>
-  <li>Cultural taste differences</li>
-</ul>
-</section>
-
-<section>
-<h2>9️⃣ Solutions & Strategy</h2>
-<ul>
-  <li>Introduce Indian-inspired beverages</li>
-  <li>Affordable mini sizes</li>
-  <li>Cashback & wallet tie-ups</li>
-  <li>Partnership with Indian suppliers</li>
-</ul>
-</section>
-
-<section>
-<h2>🔟 Conclusion</h2>
-<p>
-India offers a powerful growth opportunity for Starbucks. 
-With the right pricing, cultural adaptation, premium customer experience 
-and smart marketing, Starbucks can successfully become one of India’s leading premium café brands.
-</p>
-</section>
-
-<footer>
-  Project by: ponnam vijaykumar
-  <p style="color:white; font-size:14px; margin-top:10px;">© 2025</p>
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/800px-Starbucks_Corporation_Logo_2011.svg.png" alt="Starbucks Logo">
+        </div>
+        <h3 class="footer-title">Market Entry Strategy Analysis</h3>
+        <p class="footer-text">
+            This comprehensive analysis provides strategic insights for Starbucks' successful market penetration and sustained growth in India. All recommendations are based on market research and strategic business principles.
+        </p>
+        
+        <div class="author-section">
+            <div class="author-info">
+                <div class="author-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="author-details">
+                    <h4 class="author-name">Ponnam Vijaykumar</h4>
+                    <div class="author-title">A Self-Driven Market Entry Analysis Project</div>
+                    <p class="author-quote">
+                        "Market Entry Strategy – Starbucks in India."
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            © 2025 Starbucks Market Analysis | All rights reserved
+        </div>
+    </div>
 </footer>
 
-</div>
+<script>
+// Add hover animations to strategy cards
+const strategyCards = document.querySelectorAll('.strategy-card');
+strategyCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-8px)';
+        card.style.boxShadow = 'var(--shadow-lg)';
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0)';
+        card.style.boxShadow = 'var(--shadow-md)';
+    });
+});
 
-</body>
-</html>
+// Add scroll animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.strategy-card, .competitor-card, .highlight-section').forEach(element => {
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(20px)';
+    element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(element);
+});
+
+// Smooth scroll for navigation
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 100,
+                behavior
